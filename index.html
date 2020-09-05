@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> API WITH CSS </title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <section>
+        <h1> WHAT DOES YOUR NAME SAY ABOUT YOUR PERSONALITY ?</h1>
+        <div class="centerDiv">
+            <div class="details">
+                <label> ENTER YOUR NAME </label><br>
+                <input type="text" id="nameid">
+            </div>
+            <div class="imgdiv">
+                <img src="img.png" width="200" height="200" id="imgchange">
+            </div>
+            <button onclick="myfunction()"> CLICK ME </button>
+        </div>
+    </section>
+
+    <script>
+        function myfunction() {
+            var name= document.getElementById("nameid").value;
+            alert(name);
+            document.getElementById("imgchange").src = `https://joeschmoe.io/api/v1/${name}`;
+        }
+    </script>
+
+</body>
+
+</html>
